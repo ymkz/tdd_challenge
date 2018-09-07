@@ -1,3 +1,4 @@
+import sys
 import math
 
 class Calc:
@@ -6,22 +7,16 @@ class Calc:
   def calc_price(self, arr):
     return math.floor(sum(arr) * self.tax + 0.5)
 
+  def input_calc(self, in_stream, out_stream):
+    results = []
+    for line in in_stream.readlines():
+        price_list = []
+        if line != "\n":
+            price_list = [int(n) for n in line.replace('\n','').split(',')]
+        results.append(self.calc_price(price_list))
+    for i in range(len(results)-1):
+        out_stream.write(str(results[i]) + "\n")
+
 if __name__ == '__main__':
   calc = Calc()
-  print(calc.calc_price([10, 12]))
-  print(calc.calc_price([40, 16]))
-  print(calc.calc_price([100, 45]))
-  print(calc.calc_price([50,50,55]))
-  print(calc.calc_price([1000]))
-  print(calc.calc_price([20, 40]))
-  print(calc.calc_price([30, 60, 90]))
-  print(calc.calc_price([11,12,13]))
-
-# 24
-# 62
-# 160
-# 171
-# 1100
-# 66
-# 198
-# 40
+  calc.input_calc(sys.stdin, sys.stdout)
