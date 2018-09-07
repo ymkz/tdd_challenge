@@ -1,0 +1,12 @@
+abc@example.com
+a..bc@example.com
+abc@ex!#$%&dfal'*dakjfl+-/=d125a?^_`{|}~ample.com
+abc@ex"am"ple.com
+abc@e x"am"ple.com
+abc@e.x.a.m.p.le.com
+abc@.example.com
+abc@example.com.
+abc@exa..mple.com
+abc@m
+abc@
+abc@ex!a$m#pl12.9.0e.com.
