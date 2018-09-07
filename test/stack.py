@@ -5,3 +5,8 @@ class TestStack(unittest.TestCase):
   def test_create(self):
     stack = Stack()
     self.assertEqual(stack.isEmpty(), True)
+
+  def test_size(self):
+    stack = Stack()
+    # self.assertEqual(stack.size(), 0)
+    self.assertEqual(stack.size(), 2)
